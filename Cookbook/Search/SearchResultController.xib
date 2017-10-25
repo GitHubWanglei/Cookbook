@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SearchResultController" customModule="Cookbook" customModuleProvider="target">
+            <connections>
+                <outlet property="leftView" destination="cz0-Sn-KWY" id="dhU-db-E4w"/>
+                <outlet property="maskView" destination="OY6-Ys-2tr" id="hHA-8e-P5H"/>
+                <outlet property="rightView" destination="iqf-rf-kbf" id="KEE-DK-J31"/>
+                <outlet property="scrollView" destination="t83-Uu-0w1" id="Vo4-kc-CAi"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t83-Uu-0w1">
+                    <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
+                    <subviews>
+                        <customView fixedFrame="YES" id="cz0-Sn-KWY">
+                            <rect key="frame" x="0.0" y="0.0" width="452" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </customView>
+                        <customView fixedFrame="YES" id="iqf-rf-kbf">
+                            <rect key="frame" x="453" y="0.0" width="447" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </customView>
+                    </subviews>
+                    <holdingPriorities>
+                        <real value="250"/>
+                        <real value="250"/>
+                    </holdingPriorities>
+                </splitView>
+                <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-Ys-2tr">
+                    <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
+                    <view key="contentView" id="1Re-bE-WzR">
+                        <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-RT-DZi">
+                                <rect key="frame" x="382" y="288" width="137" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="暂无搜索结果." id="AhI-Lh-d7X">
+                                    <font key="font" size="20" name=".PingFangSC-Ultralight"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="fillColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="t83-Uu-0w1" secondAttribute="bottom" id="BEv-jo-OqK"/>
+                <constraint firstAttribute="trailing" secondItem="OY6-Ys-2tr" secondAttribute="trailing" id="QiW-If-Gvq"/>
+                <constraint firstItem="t83-Uu-0w1" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Xb4-dF-kFj"/>
+                <constraint firstItem="OY6-Ys-2tr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="bel-Rf-pSJ"/>
+                <constraint firstAttribute="bottom" secondItem="OY6-Ys-2tr" secondAttribute="bottom" id="gWn-ii-uhU"/>
+                <constraint firstAttribute="trailing" secondItem="t83-Uu-0w1" secondAttribute="trailing" id="u15-4H-qpY"/>
+                <constraint firstItem="OY6-Ys-2tr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="wPF-eb-1Qa"/>
+                <constraint firstItem="t83-Uu-0w1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ynW-1l-GPq"/>
+            </constraints>
+            <point key="canvasLocation" x="34" y="166"/>
+        </customView>
+    </objects>
+</document>

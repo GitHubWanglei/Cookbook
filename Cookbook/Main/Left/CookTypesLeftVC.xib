@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CookTypesLeftVC" customModule="Cookbook" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="fvE-hP-fQl" id="Ewx-xh-eMc"/>
+                <outlet property="scrollView" destination="XDR-XP-Dla" id="xsN-ub-cqs"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDR-XP-Dla">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="600"/>
+                    <clipView key="contentView" drawsBackground="NO" id="VHl-80-8ij">
+                        <rect key="frame" x="1" y="1" width="98" height="598"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="fvE-hP-fQl">
+                                <rect key="frame" x="0.0" y="0.0" width="98" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" id="O5I-6h-Wui">
+                                    <size key="itemSize" width="98" height="50"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="Wqe-cF-tpe"/>
+                                    <outlet property="delegate" destination="-2" id="vBB-En-07Q"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="UZW-bX-LLz">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="5ww-G5-xhl">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XDR-XP-Dla" secondAttribute="bottom" id="2Ex-7s-xbi"/>
+                <constraint firstAttribute="trailing" secondItem="XDR-XP-Dla" secondAttribute="trailing" id="KWT-Pc-6uj"/>
+                <constraint firstItem="XDR-XP-Dla" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="QfZ-rK-ZYW"/>
+                <constraint firstItem="XDR-XP-Dla" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="tgc-zo-CKQ"/>
+            </constraints>
+            <point key="canvasLocation" x="-376" y="152"/>
+        </customView>
+    </objects>
+</document>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CookTypesVC" customModule="Cookbook" customModuleProvider="target">
+            <connections>
+                <outlet property="leftView" destination="jaj-cJ-SoK" id="Pb9-c3-QHf"/>
+                <outlet property="rightView" destination="BAb-MQ-V4I" id="Pjj-Zh-Ifc"/>
+                <outlet property="splitView" destination="gK5-ie-xcb" id="Ggz-F6-0Z2"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gK5-ie-xcb">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                    <subviews>
+                        <customView fixedFrame="YES" id="jaj-cJ-SoK">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </customView>
+                        <customView fixedFrame="YES" id="BAb-MQ-V4I">
+                            <rect key="frame" x="151" y="0.0" width="149" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </customView>
+                    </subviews>
+                    <holdingPriorities>
+                        <real value="100"/>
+                        <real value="300"/>
+                    </holdingPriorities>
+                </splitView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gK5-ie-xcb" secondAttribute="bottom" id="BGO-Qj-7kA"/>
+                <constraint firstItem="gK5-ie-xcb" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="PPo-Bp-hZd"/>
+                <constraint firstItem="gK5-ie-xcb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="TdX-wt-zHC"/>
+                <constraint firstAttribute="trailing" secondItem="gK5-ie-xcb" secondAttribute="trailing" id="aOK-MZ-b2s"/>
+            </constraints>
+            <point key="canvasLocation" x="118" y="267"/>
+        </customView>
+    </objects>
+</document>

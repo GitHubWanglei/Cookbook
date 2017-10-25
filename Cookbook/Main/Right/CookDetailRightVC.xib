@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CookDetailRightVC" customModule="Cookbook" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webView" destination="LrU-Jl-z9V" id="jbc-xe-5Rc"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LrU-Jl-z9V">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="271"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LrU-Jl-z9V" secondAttribute="trailing" id="7nC-87-vgV"/>
+                <constraint firstItem="LrU-Jl-z9V" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="F6A-G0-Qd6"/>
+                <constraint firstItem="LrU-Jl-z9V" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="bnT-iB-lYk"/>
+                <constraint firstAttribute="bottom" secondItem="LrU-Jl-z9V" secondAttribute="bottom" id="efY-aT-pWs"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>

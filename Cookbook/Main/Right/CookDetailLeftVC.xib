@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CookDetailLeftVC" customModule="Cookbook" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="ytH-vh-YiI" id="dVg-wN-rbA"/>
+                <outlet property="scrollView" destination="Vnf-ol-Ha7" id="sQP-bY-dGj"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnf-ol-Ha7">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
+                    <clipView key="contentView" drawsBackground="NO" id="1J3-EC-fhX">
+                        <rect key="frame" x="1" y="1" width="148" height="598"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="ytH-vh-YiI">
+                                <rect key="frame" x="0.0" y="0.0" width="148" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" id="fbk-eJ-39F">
+                                    <size key="itemSize" width="148" height="150"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="rgS-4d-AAp"/>
+                                    <outlet property="delegate" destination="-2" id="ZTs-wj-Gwt"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="aEU-Pt-fBW">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Jta-eC-BIB">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vnf-ol-Ha7" secondAttribute="trailing" id="0si-2z-jIq"/>
+                <constraint firstAttribute="bottom" secondItem="Vnf-ol-Ha7" secondAttribute="bottom" id="Hue-5G-Uqg"/>
+                <constraint firstItem="Vnf-ol-Ha7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="wXn-Qz-XHo"/>
+                <constraint firstItem="Vnf-ol-Ha7" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="yHN-mo-6Q1"/>
+            </constraints>
+            <point key="canvasLocation" x="15" y="144"/>
+        </customView>
+    </objects>
+</document>
